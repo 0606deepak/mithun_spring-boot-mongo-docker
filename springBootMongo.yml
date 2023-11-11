@@ -27,10 +27,12 @@ metadata:
   name: springboot
 spec:
   type: LoadBalancer
-  ports:
-    - port: 8000
   selector:
-    name: springboot
+    name: springboot 
+  ports:
+  - name: springboot
+    protocol: TCP
+    port: 8000
 ---
 # Mongo host path rc
 apiVersion: v1
